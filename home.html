@@ -7,93 +7,195 @@
     <style>
         h1{
             margin:50px 0 0 0;
+            color: #ffffff;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow:
+            0 2px 0 #000,
+            2px 0 0 #000,
+            0 -2px 0 #000,
+            -2px 0 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+            font-family:sans-serif,HGS創英角ﾎﾟｯﾌﾟ体;
+        }
+        h2{
+            margin:50px 0 0 0;
+            color:#ffffff;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow:
+            0 1px 0 #000,
+            1px 0 0 #000,
+            0 -1px 0 #000,
+            -1px 0 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+            font-family:sans-serif,HGS創英角ﾎﾟｯﾌﾟ体;
         }
         body{
-            background:linear-gradient(#87cefa,#ffffff);
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(#4bc0c8,#c779d0);
         }
         img{
-            margin:100px 0 0 0;
+            margin:50px 0 0 0;
         }
         table{
             text-align: center;            
-            margin:100px 0 0 0;
+            margin:50px 0 0 0;
         }
         th{
-            background-color:#c0c0c0; 
+            background-color:#dcdcdc; 
         }
         td{
-            background-color:#f5f5f5;
+            background-color:#ffffff;
         }
+        .footer{
+            height:200px;
+            margin:50px 0 0 0;
+            padding:10px 0 0 0;
+            background-color:#333631;
+        }
+        .footer p{
+            padding: 0px 50px;
+            font-size: 1.2em;
+            color:#ffffff;
+        }
+        #nav{
+            text-align: center;
+            background-color: #444; 
+            padding: 0px;
+            font-size: 1.2em;   
+        }
+        #nav ul li{
+            font-weight: bold;     
+            display: inline;
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+        #nav ul li a { 
+            font-family: "Trebuchet MS", sans-serif; 
+            text-decoration: none;
+            color: #fff;     
+        }  
     </style>
 </head>
 <body>
     <div class="head" align="center">
 
-    <h1>出店MAP</h1>
-    <hr size="10" width="60%" color="#ffffff">
+    <h1>校内マップ</h1>
+    <!--<hr size="10" width="60%" color="#ffffff">-->
+    
+    <div id="nav">
+    <ul>        
+    <li><a href="nakaniwa.html">中庭へ</a></li>    
+    <li><a href="#">共通棟へ</a></li>   
+    <li><a href="#">専門棟へ</a></li>
+    <li><a href="#">第1体育館前へ</a></li> 
+    <li><a href="#">グラウンドへ</a></li>
+    </ul> 
+    </div> 
+    
     <img src="overall_map.png"usemap="#overall">
 
     <map name="overall">
     <area shape="rect" coords="83,64,220,272" href="nakaniwa.html" alt="中庭">
-            
-    <table border="1" width="60%" cellspacing="0" cellpadding="5" bordercolor="#000000">
+    
+    <h2>施設名称</h2>
+    <hr size="5" width="70%" color="#191970">         
+    
+    <table border="1" width="70%" cellspacing="0" cellpadding="5" bordercolor="#000000">
         <tr>
             <th>番号</th>
             <th>施設名</th>
-            <th>会場・出店名</th>
+            <th>会場・用途</th>
         </tr>
         <tr>
             <td>1</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>共通教育・管理棟</td>
+            <td>部活バザー・展示等</td>
         </tr>
          <tr>
             <td>2</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>専門科目棟-1</td>
+            <td>展示等</td>
         </tr>
          <tr>
             <td>3</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>専門科目棟-2</td>
+            <td>立入禁止</td>
         </tr>
          <tr>
             <td>4</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>専攻科棟</td>
+            <td>立入禁止</td>
         </tr>
          <tr>
             <td>5</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>共同教育研究棟</td>
+            <td>立入禁止</td>
         </tr>
          <tr>
             <td>6</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>実習・実験棟</td>
+            <td>展示等</td>
         </tr>
          <tr>
             <td>7</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>図書館</td>
+            <td>図書館</td>
         </tr>
          <tr>
             <td>8</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>学生教職員食堂</td>
+            <td>学食</td>
         </tr>
          <tr>
             <td>9</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>龍峰会館</td>
+            <td>展示等</td>
         </tr>
          <tr>
             <td>10</td>
-            <td>ほげほげ</td>
-            <td>ふがふが</td>
+            <td>学生寮(八龍寮・夕葉寮)</td>
+            <td>立入禁止</td>
         </tr>
+         <tr>
+            <td>11</td>
+            <td>第1体育館</td>
+            <td>発表等</td>
+        </tr>
+         <tr>
+            <td>12</td>
+            <td>第2体育館</td>
+            <td>発表等</td>
+        </tr>
+         <tr>
+            <td>13</td>
+            <td>プール</td>
+            <td>立入禁止</td>
+        </tr>
+         <tr>
+            <td>14</td>
+            <td>宿泊研究所</td>
+            <td>立入禁止</td>
+        </tr>         
     </table>
-    
+    </div>
+
+    <div class="footer" align="left">
+        <p><a href="#">
+        球技クラスマッチ</a></p>
+        <p><a href="#">
+        高専祭本祭</a></p>
+        <p><a href="http://sysken.y.kumamoto-nct.ac.jp/">
+        SYSKEN WEB</a></p>
+        <p><a href="http://www.kumamoto-nct.ac.jp/">熊本高等専門学校公式HP</a></p>
     </div>
 </body>
 </html>
