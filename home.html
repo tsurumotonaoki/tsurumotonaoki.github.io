@@ -19,7 +19,7 @@
             2px -2px 0 #000,
             -2px 2px 0 #000,
             2px 2px 0 #000;
-            font-family:sans-serif,HGS創英角ﾎﾟｯﾌﾟ体;
+            font-family: "Trebuchet MS", sans-serif; 
         }
         h2{
             margin:50px 0 0 0;
@@ -35,11 +35,12 @@
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;
-            font-family:sans-serif,HGS創英角ﾎﾟｯﾌﾟ体;
+            font-family: "Trebuchet MS", sans-serif; 
         }
         body{
+            position: relative;
+            margin: 0;
             width: 100%;
-            height: 100%;
             background:linear-gradient(#4bc0c8,#c779d0);
         }
         img{
@@ -48,7 +49,9 @@
             margin:50px 0 0 0;
         }
         table{
-            text-align: center;            
+            text-align: center;
+            width: 70%;
+            min-width:1000px           
             margin:50px 0 0 0;
         }
         th{
@@ -57,43 +60,89 @@
         td{
             background-color:#ffffff;
         }
-        .footer{
-            height:200px;
-            margin:50px 0 0 0;
-            padding:10px 0 0 0;
+        a{
+            color: #fff;
+            font-family: "Trebuchet MS", sans-serif; 
+        }
+        #header{
+            padding:0 0 100px 0;
+        }
+        #footer{
+            position: relative;
+            margin:0 0 0 0;
+            padding-top: 10px;
+            padding-right: 0px;
+            padding-bottom: 10px;
             background-color:#333631;
         }
-        .footer p{
+        #footer p{
             padding: 0px 50px;
             font-size: 1.2em;
             color:#ffffff;
         }
-        #nav{
+        #menu {
+            position: relative;
+            overflow: hidden;
+        }
+        #menu ul{
+            margin: 0; 
+            padding: 0; 
+            list-style: none; 
+            text-align: center;
+            float:left;
+            left:50%;
+            position:relative;
+        }
+        #menu li{ 
+            display: inline; 
+            padding: 0; 
+            margin: 0; 
+            float: left;
+            left:-50%;
+            position:relative;
+        }
+        #menu li a{
+            display: block; 
+            border-left: 8px solid #C97556;
+            background-color: #474655;
+            padding: 5px 0px;
+            text-decoration: none;
+            color: #E1E2CF;
+            width: 130px; 
+            margin: 1px 0px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        #menu li a:hover{
+            border-left: 8px solid #990033;
+            background-color: #474655;
+        }
+        /*#nav{
             text-align: center;
             background-color: #444; 
+            min-width:1000px 
             padding: 0px;
             font-size: 1.2em;   
         }
         #nav ul li{
             font-weight: bold;     
             display: inline;
-            margin-left: 3em;
-            margin-right: 3em;
+            margin-left: 0 auto;
+            margin-right: 0 auto;
         }
         #nav ul li a { 
-            font-family: "Trebuchet MS", sans-serif; 
             text-decoration: none;
             color: #fff;     
-        }  
+        }*/  
     </style>
 </head>
 <body>
-    <div class="head" align="center">
+    <div id="header" align="center">
 
     <h1>校内マップ</h1>
     <!--<hr size="10" width="60%" color="#ffffff">-->
     
-    <div id="nav">
+    <!--<div id="nav">
     <ul>        
     <li><a href="nakaniwa.html">中庭へ</a></li>    
     <li><a href="#">共通棟へ</a></li>   
@@ -101,8 +150,18 @@
     <li><a href="#">第1体育館前へ</a></li> 
     <li><a href="#">グラウンドへ</a></li>
     </ul> 
-    </div> 
+    </div>--> 
     
+    <div id="menu">
+    <ul>
+    <li><a href="#">中庭へ</a></li>
+    <li><a href="#">共通棟へ</a></li>
+    <li><a href="#">専門棟へ</a></li>
+    <li><a href="#">第1体育館前へ</a></li>
+    <li><a href="#">グラウンドへ</a></li>
+    </ul> 
+    </div>
+
     <img src="overall_map.png"usemap="#overall">
 
     <map name="overall">
@@ -190,7 +249,7 @@
     </table>
     </div>
 
-    <div class="footer" align="left">
+    <div id="footer" align="left">
         <p><a href="#">
         球技クラスマッチ</a></p>
         <p><a href="#">
