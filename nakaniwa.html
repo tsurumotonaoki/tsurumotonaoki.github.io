@@ -4,84 +4,37 @@
 <head>
     <meta charset="utf-8" />
     <title>出店MAP/中庭</title>
-    <style>
-        h1{
-            margin:50px 0 0 0;
-        }
-        body{
-            background:linear-gradient(#87cefa,#ffffff);
-        }
-        .top{
-            margin:100px 0 0 0;
-        }
-        table{
-            text-align: center;            
-            margin:100px 0 0 0;
-        }
-        th{
-            background-color:#c0c0c0; 
-        }
-        td{
-            background-color:#f5f5f5;
-        }
-	.balloon {
-		width: 100px;
-		animation: fadeIn 0.5s ease 0s 1 normal;
-		position: relative;
-		display: inline-block;
-		margin: 250px 0;
-		padding: 7px 10px;
-		min-width: 500px;
-		max-width: 100%;
-		color: #555;
-		font-size: 16px;
-		background: #ffefd5;
-		border-radius: 15px;
-		border-width: 14px;
-            	border: 2px solid #000000;
-	}
-	@keyframes fadeIn {
-            0% {opacity: 0}
-            100% {opacity: 1}
-        }
-        @-webkit-keyframes fadeIn {
-            0% {opacity: 0}
-            100% {opacity: 1}
-        }
-	.balloon:before{
-		content: "";
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		margin-left: -15px;
-		border: 15px solid transparent;
-		border-top: 15px solid #000000;
-	}
-	.balloon p {
-		margin: 20px;
-		padding: 0;
-	} 
-	.textdesign{
-		text-align: center;
-		position: absolute;
-		top: 400px;
-		left: 0;
-		right: 0;
-            	bottom: 0;
-		margin: auto;
-	}
-    </style>
+    <link rel="stylesheet" type="text/css" href="other_style.css">
 </head>
 <body>
-    <div class="head" align="center">
+    <div id="header" align="center">
 
         <h1>ステージ付近</h1>
-        <hr size="10" width="60%" color="#ffffff">
-        <img class="top"src="stage.png"usemap="#stage">
+
+        <div id="menu">
+        <ul>
+
+        <li><a href="home.html">ホームへ</a></li>
+        <li><a href="nakaniwa.html">中庭へ</a></li>
+        <li><a href="#">共通棟へ</a></li>
+        <li><a href="#">専門棟へ</a></li>
+        <li><a href="#">第1体育館前へ</a></li>
+        <li><a href="#">グラウンドへ</a></li>
+        </ul> 
+        </div>
+
+        <img src="stage.png" usemap="#stage">
 
         <map name="stage">
-        <area shape="rect" coords="83,64,220,272" href="#" onclick="hyoji(0,1);abc(1);" alt="リンク1">
-        <area shape="rect" coords="220,64,437,272" href="#" onclick="hyoji(0,2);abc(2);" alt="リンク2">
+        <area shape="rect" coords="83,64,220,272" href="#disp1" data-lity="data-lity" 
+            onclick="hyoji(0,1);abc(1);" alt="リンク1">
+        <area shape="rect" coords="220,64,437,272" href="#disp2" data-lity="data-lity"
+            onclick="hyoji(0,2);abc(2);" alt="リンク2">
+
+        <!--<area shape="rect" coords="83,64,220,272" href="#disp1" data-lity="data-lity" 
+            onclick="hyoji(0,1);abc(1);" alt="リンク1">
+        <area shape="rect" coords="220,64,437,272" href="#disp2" data-lity="data-lity"
+            onclick="hyoji(0,2);abc(2);" alt="リンク2">-->
 
         <script type="text/javascript">
             function abc(num){
@@ -95,9 +48,9 @@
             }
         </script>
 
-        <div id="disp1"class="textdesign"style="display:none">
-	        <div class="balloon"align="center">
-                <img src="test.png"align="right">
+        <div id="disp1" class="textdesign" style="display:none">
+	        <div class="balloon" align="center">
+                <img src="test.png" align="right">
                 <p align="center">
                 ここに紹介文1が入りますここに紹介文1が入ります
                 ここに紹介文1が入りますここに紹介文1が入ります
@@ -106,9 +59,9 @@
 		    </div>
         </div>
 
-        <div id="disp2"class="textdesign"style="display:none">
-	        <div class="balloon"align="center">
-                <img src="test.png"align="right">
+        <div id="disp2" class="textdesign" style="display:none">
+	        <div class="balloon" align="center">
+                <img src="test.png" align="right">
                 <p align="center">
                 ここに紹介文2が入りますここに紹介文2が入ります
                 ここに紹介文2が入りますここに紹介文2が入ります
@@ -117,64 +70,80 @@
 		    </div>
         </div>
 
-        <table border="1" width="60%" cellspacing="0" cellpadding="5" bordercolor="#000000">
-                <tr>
-                    <th>番号</th>
-                    <th>出店名</th>
-                    <th>部活動・グループ名</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>ほげほげ</td>
-                    <td>ふがふが</td>
-                </tr>
-            </table>
+        <h2>施設名称</h2>
+        <hr size="5" width="80%" color="#191970">
+        
+        <table border="1" width="70%" cellspacing="0" cellpadding="5" bordercolor="#000000">
+            <tr>
+                <th>番号</th>
+                <th>出店名</th>
+                <th>部活動・グループ名</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>ほげほげ</td>
+                <td>ふがふが</td>
+            </tr>
+        </table>
     </div>
-<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+
+    <div id="footer" align="left">
+        <p><a href="#">
+        球技クラスマッチ</a></p>
+        <p><a href="#">
+        高専祭本祭</a></p>
+        <p><a href="http://sysken.y.kumamoto-nct.ac.jp/">
+        SYSKEN WEB</a></p>
+        <p><a href="http://www.kumamoto-nct.ac.jp/">熊本高等専門学校公式HP</a></p>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js'></script>  
 </body>
 </html>

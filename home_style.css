@@ -1,0 +1,113 @@
+        h1{
+            margin:50px 0 0 0;
+            color: #ffffff;
+            font-size: 4em;
+            font-weight: bold;
+            text-shadow:
+            0 2px 0 #000,
+            2px 0 0 #000,
+            0 -2px 0 #000,
+            -2px 0 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+            font-family: "Trebuchet MS", sans-serif; 
+        }
+        h2{
+            margin:50px 0 0 0;
+            color:#ffffff;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow:
+            0 1px 0 #000,
+            1px 0 0 #000,
+            0 -1px 0 #000,
+            -1px 0 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+            font-family: "Trebuchet MS", sans-serif; 
+        }
+        body{
+            position: relative;
+            margin: 0;
+            width: 100%;
+            background:linear-gradient(#4bc0c8,#c779d0);
+        }
+        img{
+            width: 70%;
+            height: 70%;
+            margin:50px 0 0 0;
+        }
+        table{
+            text-align: center;
+            width: 80%;
+            min-width:1000px           
+            margin:50px 0 0 0;
+            font-size: 20px;
+        }
+        th{
+            background-color:#dcdcdc; 
+        }
+        td{
+            background-color:#ffffff;
+        }
+        a{
+            color: #fff;
+            font-family: "Trebuchet MS", sans-serif; 
+        }
+        #header{
+            padding:0 0 100px 0;
+        }
+        #footer{
+            position: relative;
+            margin:0 0 0 0;
+            padding-top: 10px;
+            padding-right: 0px;
+            padding-bottom: 10px;
+            background-color:#333631;
+        }
+        #footer p{
+            padding: 0px 50px;
+            font-size: 1.2em;
+            color:#ffffff;
+        }
+        #menu {
+            position: relative;
+            overflow: hidden;
+        }
+        #menu ul{
+            margin: 50px 0 0 0; 
+            padding: 0; 
+            list-style: none; 
+            text-align: center;
+            float:left;
+            left:50%;
+            position:relative;
+        }
+        #menu li{ 
+            display: inline; 
+            padding: 0; 
+            margin: 0; 
+            float: left;
+            left:-50%;
+            position:relative;
+        }
+        #menu li a{
+            display: block; 
+            border-left: 8px solid #C97556;
+            background-color: #474655;
+            padding: 5px 3em;
+            text-decoration: none;
+            color: #ffffff;
+            width: 130px; 
+            margin: 1px 0px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        #menu li a:hover{
+            border-left: 8px solid #990033;
+            background-color: #474655;
+        }  
