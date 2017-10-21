@@ -40,7 +40,12 @@
             text-align: center;            
             margin:100px 0 0 0;
         }
-        img{
+        #top_img{
+            width: 70%;
+            height: 70%;
+            margin:50px 0 0 0;
+        }
+        #disp_img{
             width: 70%;
             height: 70%;
             margin:50px 0 0 0;
@@ -109,6 +114,7 @@
 		    margin: auto;
 	    }
         #header{
+            margin: 0;
             padding:0 0 100px 0;
         }
         #footer{
