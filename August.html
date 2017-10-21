@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>位置計算</title>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 60%;
+      width: 80%;
+    }
+  </style>
+
+</style>
+
+<script type="text/javascript">
+var Radius_long = 6378137;
+var Radius_short = 6356752;
+var Henpei = 1 / 298.257222101;
+
+var count = 0;
+var Acount = 0;
+
+var length, h, t;
+var t1, g1, alpha12;
+var LatLon0, LatLon1;
+var v, deg;
+
+var marker;
+
+function doRad(deg){
+    var a = deg * Math.PI / 180;
+    return a;
+}
+
+function radDo(rad){
+    var a = rad * 180 / Math.PI;
+    return a;
+}
+
+function input(){
+    Acount = 1;
+    v = document.form.v.value;
+    deg = document.form.deg.value;
+    <!--t1 = document.form.t1.value;-->
+    <!--g1 = document.form.g1.value;-->
+    alpha12 = document.form.alpha12.value;
+   
+    distance();
+    <!--position();-->
+
+    document.form.length.value = length;
+    document.form.h.value = h;
+    document.form.t.value = t;
+   
+}
+
+function distance(){
+    var rad, rad2;
+    var g = 9.80665;
+
+    rad = doRad(deg);
+    rad2 = 2 * rad;
+    length = v * v * Math.sin(rad2) / g;
+    h = (v * Math.sin(rad)) * (v * Math.sin(rad)) / (2 * g);
+    t = 2 * v * Math.sin(rad) / g;
+}
+
+function position(){
+    var u1, sigma1, sigma, alpha, u2, a, b;
+    var ab, ab2, dm2, dsigma, x, y;
+    var lambda, c, omega;
+
+    var count = 0, sigma0;
+
+    length = length / 1000;
+
+    t1 = doRad(t1);
+    g1 = doRad(g1);
+
+    alpha12 = doRad(alpha12);
+    length = length * 1000;
+
+    u1 = Math.atan((1 - Henpei) * Math.tan(t1));
+    sigma1 = Math.atan(Math.tan(u1) / Math.cos(alpha12));
+    alpha = Math.asin(Math.cos(u1) * Math.sin(alpha12));
+    u2 = Math.pow(Math.cos(alpha), 2) * (Math.pow(Radius_long, 2) - Math.pow(Radius_short, 2)) / Math.pow(Radius_short, 2);
+    ab = (u2 / 16384);
+    ab2 = (4096 + u2 * (-768 + u2 * (320 - 175 * u2)));
+    a = 1 + ab * ab2;
+    b = (u2 / 1024) * (256 + u2 * (-128 + u2 * (74 - 47 * u2)));
+
+    sigma = length / Radius_short / a;
+    do {
+        sigma0 = sigma;
+        dm2 = 2 * sigma1 + sigma;
+        x = Math.cos(sigma) * (-1 + 2 * Math.pow(Math.cos(dm2), 2)) - b / 6 * Math.cos(dm2) * (-3 + 4 * Math.pow(Math.sin(dm2), 2))
+            * (-3 + 4 * Math.pow(Math.cos(dm2), 2));
+        dsigma = b * Math.sin(sigma) * (Math.cos(dm2) + b / 4 * x);
+        sigma = length / Radius_short / a + dsigma;
+        count++;
+    } while (5 > count && Math.abs((sigma0 - sigma) / sigma0) > 0.000000000000001);
+
+    x = Math.sin(u1) * Math.cos(sigma) + Math.cos(u1) * Math.sin(sigma) * Math.cos(alpha12);
+    y = (1 - Henpei) * Math.pow(Math.pow(Math.sin(alpha), 2) + Math.pow(Math.sin(u1) * Math.sin(sigma) - Math.cos(u1) * Math.cos(sigma) * Math.cos(alpha12), 2), 0.5);
+    LatLon0 = radDo(Math.atan(x / y));
+    lambda = Math.atan(Math.sin(sigma) * Math.sin(alpha12) / (Math.cos(u1) * Math.cos(sigma) - Math.sin(u1) * Math.sin(sigma) * Math.cos(alpha12)));
+
+    c = (Henpei / 16) * Math.pow(Math.cos(alpha), 2) * (4 + Henpei * (4 - 3 * Math.pow(Math.cos(alpha), 2)));
+    x = Math.cos(dm2) + c * Math.cos(sigma) * (-1 + 2 * Math.pow(Math.cos(dm2), 2));
+    omega = lambda - (1 - c) * Henpei * Math.sin(alpha) * (sigma + c * Math.sin(sigma) * x);
+    LatLon1 = radDo(g1 + omega);
+    //document.form.LatLon0.value = LatLon0;
+    //document.form.LatLon1.value = LatLon1;
+    document.form1.text1.value = LatLon0;
+    document.form1.text2.value = LatLon1;
+}
+
+</script>
+
+<body>
+    <div id="map"></div>
+  <ul>
+    <li>lat: <span id="lat"></span></li>
+    <li>lng: <span id="lng"></span></li>
+  </ul>
+  <script>
+  
+
+    function initMap() {
+
+      // マップの初期化
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: {lat: 32.47668205552505, lng: 130.60685276985168}
+
+      });
+
+      if(Acount == 1){
+    	t1 = lat;
+    	g1 = lng;
+   	position();
+      }
+
+      // クリックイベントを追加
+      map.addListener('click', function(e) {
+        getClickLatLng(e.latLng, map);
+      });
+    }
+
+    function getClickLatLng(lat_lng, map) {
+     //if(count==0){
+      // 座標を表示
+      document.getElementById('lat').textContent = lat_lng.lat();
+      document.getElementById('lng').textContent = lat_lng.lng();
+      document.form1.lat.value = lat_lng.lat();
+      document.form1.lng.value = lat_lng.lng();
+      t1 = lat_lng.lat();
+      g1 = lat_lng.lng();
+      position();
+     
+      // マーカーを設置
+      deleteMakers();
+      marker = new google.maps.Marker({position: lat_lng, map: map});
+  
+      //今あるマーカー削除
+      function deleteMakers() {
+	if(marker != null){
+	   marker.setMap(null);
+        }
+        marker = null;
+      }
+
+     //}
+
+      // 座標の中心をずらす
+      // http://syncer.jp/google-maps-javascript-api-matome/map/method/panTo/
+      map.panTo(lat_lng);
+    }
+
+  </script>
+
+ <form name="form">
+    <table>
+    <tr><th>初速度</th><td><input type="text" name="v" size="20">m/s<td></tr>
+    <tr><th>発射角</th><td><input type="text" name="deg" size="20">°</td></tr>
+    <!--<tr><th>現在地の緯度</th><td><input type="text" name="t1" size="20"></td></tr>-->
+    <!--<tr><th>現在地の経度</th><td><input type="text" name="g1" size="20"></td></tr>-->
+    <tr><th>方向角</th><td>
+    <input type="text" name="alpha12" size="20">°(磁北からの角度)
+    <input type="button" value="実行" onClick="input();">
+    </td></tr>
+    
+    <tr><th>到達距離</th><td><input type="text" name="length" size="20">m</td></tr>
+    <tr><th>到達高度</th><td><input type="text" name="h" size="20">m</td></tr>
+    <tr><th>滞空時間</th><td><input type="text" name="t" size="20">s</td></tr>
+    <!--<tr><th>到達地点の緯度</th><td><input type="text" name="LatLon0" size="20"></td></tr>
+    <tr><th>到達地点の経度</th><td><input type="text" name="LatLon1" size="20"></td></tr>-->
+    </table>
+ </form>
+ 
+ <form action="newgeo.php" name="form1" method="post">
+    <table>
+
+    <tr><th>現在地の緯度</th><td>
+    <input id="test" type="text" name="lat" size="20" value="">
+    <tr><th>現在地の経度</th><td>
+    <input id="test" type="text" name="lng" size="20" value="">
+
+    <tr><th>到達地点の緯度</th><td>
+    <input id="test" type="text" name="text1" size="20" value="">
+    <tr><th>到達地点の経度</th><td>
+    <input id="test" type="text" name="text2" size="20" value="">
+
+    <input type="submit" name="send" value="送信">
+    </td></tr>
+    </table>
+ </form>
+
+ <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>
+
+</body>
+
+</html>
