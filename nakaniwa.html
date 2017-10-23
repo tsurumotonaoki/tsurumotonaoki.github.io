@@ -7,27 +7,75 @@
     <link rel="stylesheet" type="text/css" href="other_style.css">
 </head>
 <body>
+
+    <header>
+    <img src="kf2017_poster-001.jpg" width="100%";>
+    </header>
+
+    <div id="dropmenu">
+        <li>
+            <a href="#">高専祭</a>
+            <ul style="width:100%;">
+                <li>
+                    <a href="#">ホーム</a>
+                </li>
+                <li>
+                    <a href="#">校内マップ</a>
+                </li>
+                <li>
+                    <a href="#">タイムスケジュール</a>
+                </li>
+                <li>
+                    <a href="#">球技大会</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">球技大会</a>
+            <ul style="width:100%;">
+                <li>
+                    <a href="#date">開催日</a>
+                </li>
+                <li>
+                    <a href="#tournament">トーナメント表</a>
+                </li>
+                <li>
+                    <a href="#schedule">タイムスケジュール</a>
+                </li>
+                <li>
+                    <a href="#rule">ルール</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">その他</a>
+            <ul style="width:100%;">
+                <li>
+                    <a href="http://www.kumamoto-nct.ac.jp/">学校HP</a>
+                </li>
+                <li>
+                    <a href="http://sysken.y.kumamoto-nct.ac.jp/">SYSKEN WEB</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/sysken_ynct">SYSKEN twitter</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/nitky_kohokyoku">学生会twitter</a>
+                </li>
+            </ul>
+        </li>
+    </div>
+
     <div id="header" align="center">
+        <h1>ステージ</h1>
+    </div>
 
-        <h1>ステージ付近</h1>
-
-        <div id="menu">
-        <ul>
-
-        <li><a href="home.html">ホームへ</a></li>
-        <li><a href="nakaniwa.html">中庭へ</a></li>
-        <li><a href="#">共通棟へ</a></li>
-        <li><a href="#">専門棟へ</a></li>
-        <li><a href="#">第1体育館前へ</a></li>
-        <li><a href="#">グラウンドへ</a></li>
-        </ul> 
-        </div>
-
-        <img id="top_img" src="stage.png" usemap="#stage">
+    <div id="main" align="center">
+        <img src="stage.png" usemap="#stage">
 
         <map name="stage">
-        <area shape="rect" coords="83,64,220,272" href="#disp1" data-lity="data-lity" alt="リンク1">
-        <area shape="rect" coords="220,64,437,272" href="#disp2" data-lity="data-lity" alt="リンク2">
+        <area shape="rect" coords="0,0,100,200" href="#disp1" data-lity="data-lity" alt="リンク1">
+        <area shape="rect" coords="100,0,200,200" href="#disp2" data-lity="data-lity" alt="リンク2">
         </map>
 
         <div id="disp1" class='lity-hide'>
@@ -53,9 +101,9 @@
         </div>
 
         <h2>施設名称</h2>
-        <hr size="5" width="80%" color="#191970">
+        <hr size="5" width="90%" color="#191970">
         
-        <table border="1" width="70%" cellspacing="0" cellpadding="5" bordercolor="#000000">
+        <table border="1" width="90%" cellspacing="0" cellpadding="5" bordercolor="#000000">
             <tr>
                 <th>番号</th>
                 <th>出店名</th>
@@ -114,15 +162,53 @@
         </table>
     </div>
 
-    <div id="footer" align="left">
-        <p><a href="#">
-        球技クラスマッチ</a></p>
-        <p><a href="#">
-        高専祭本祭</a></p>
-        <p><a href="http://sysken.y.kumamoto-nct.ac.jp/">
-        SYSKEN WEB</a></p>
-        <p><a href="http://www.kumamoto-nct.ac.jp/">熊本高等専門学校公式HP</a></p>
+   <p id="map" align="center">各マップへ</p>
+        <hr size="5" width="90%" color="#191970">
+
+    <div id="menu">
+        <ul>
+        <li><a href="home.html">ホームへ</a></li>
+        <li><a href="nakaniwa.html">中庭へ</a></li>
+        <li><a href="#">共通棟へ</a></li>
+        <li><a href="#">専門棟へ</a></li>
+        <li><a href="#">第1体育館前へ</a></li>
+        <li><a href="#">グラウンドへ</a></li>
+        </ul> 
     </div>
+
+    <div id="sitemap">
+        <div id="link">
+            <a style="display: table;" id="sitemap_h">SITEMAP</a>
+            <a id="space">&emsp;</a>
+            <a id="sitemap_l" style="display: table;" href="information.html">校内マップ</a>
+            <a id="sitemap_l" style="display: table;" href="planning.html">高専祭本祭</a>
+            <a id="sitemap_l" style="display: table;" href="#">球技大会</a>
+            <a id="sitemap_l" style="display: table;" href="http://sysken.y.kumamoto-nct.ac.jp/">SYSKEN WEB</a>
+            <a id="sitemap_l" style="display: table;" href="https://twitter.com/sysken_ynct">SYSKEN Twitter</a>
+            <a id="sitemap_l" style="display: table;" href="https://twitter.com/nitky_kohokyoku">学生会 Twitter</a>
+            <a id="sitemap_l" style="display: table;" href="http://www.kumamoto-nct.ac.jp/">熊本高専HP</a>
+        </div>
+        <!-- PC用画像 -->
+        <div id="imag_area">
+            <img id="imgs" src="logo_home.png">
+        </div>
+        <!-- PC用画像 -->
+    </div>
+    <!-- リンクを張るところ -->
+
+    <!-- フッター -->
+    <div id="footer" style="top: 0px; position: relative;">
+        <hr color="#fff" /> ©2017 NITKumamotoCollege-YatsushiroCampus All Rights Reserved.
+    </div>
+    <!-- フッター -->
+
+   <script src="http://ajax.goaogleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery.rwdImageMaps.min.js"></script>
+    <script>
+    $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+    });
+    </script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />  
