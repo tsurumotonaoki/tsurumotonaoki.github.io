@@ -37,11 +37,6 @@
             background:linear-gradient(#4bc0c8,#c779d0);
         }
         table{
-            text-align: center;            
-            margin:100px 0 0 0;
-        }
-
-        table{
             text-align: center;
             width: 90%;
             min-width:1000px;           
