@@ -12,7 +12,7 @@
     <img src="kf2017_poster-001.jpg" width="100%";>
     </header>
 
-        <div id="dropmenu">
+    <div id="dropmenu">
         <li>
             <a href="#">高専祭</a>
             <ul style="width:100%;">
@@ -78,7 +78,7 @@
         </map>
 
         <h2>施設名称</h2>
-        <hr size="5" width="80%" color="#191970">         
+        <hr size="5" width="90%" color="#191970">         
     
         <table border="1" cellspacing="0" cellpadding="5" bordercolor="#000000">
             <tr>
@@ -165,9 +165,9 @@
     </div>
 
     <p id="map" align="center">各マップへ</p>
-        <hr size="5" width="80%" color="#191970">
+        <hr size="5" width="90%" color="#191970">
         
-    <div id="menu">
+    <!--<div id="menu">
         <ul>
             <li><a href="home.html">ホーム</a></li>
             <li><a href="nakaniwa.html">中庭へ</a></li>
@@ -176,7 +176,26 @@
             <li><a href="#">第1体育館前へ</a></li>
             <li><a href="#">第2体育館前へ</a></li>
         </ul> 
-    </div>
+    </div>-->
+
+    <p class="openBtn">中庭へ</p>
+    <p class="textArea"><a href="nakaniwa.html">ステージ付近</a></p>
+    <p class="textArea"><a href="nakaniwa.html">グラウンド前</a></p>
+    <p class="textArea"><a href="nakaniwa.html">ICT前</a></p>
+    <p class="textArea"><a href="nakaniwa.html">ピロティ</a></p>
+
+    <p class="openBtn2">共通教育棟へ</p>
+    <p class="textArea2"><a href="nakaniwa.html">1F</a></p>
+    <p class="textArea2"><a href="nakaniwa.html">2F</a></p>
+    <p class="textArea2"><a href="nakaniwa.html">3F</a></p>
+
+    <p class="openBtn3">専門科棟へ</p>
+    <p class="textArea3"><a href="nakaniwa.html">1F</a></p>
+    <p class="textArea3"><a href="nakaniwa.html">2F</a></p>
+
+    <p class="openBtn">第1体育館へ</p>
+    <p class="openBtn">第2体育館へ</p>
+    <p class="openBtn">実習工場へ</p>
 
     <div id="sitemap">
         <div id="link">
@@ -212,5 +231,22 @@
     });
     </script>
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $(".openBtn").click(function(){
+            $($(this).nextAll(".textArea")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn2").click(function(){
+            $($(this).nextAll(".textArea2")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn3").click(function(){
+            $($(this).nextAll(".textArea3")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+    });
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-        h1{
+﻿        h1{
             margin:50px  0 50px 0;
             color: #ffffff;
             font-size: 4em;
@@ -41,7 +41,7 @@
         }
         table{
             text-align: center; 
-            width: 80%;         
+            width: 90%;         
             margin:50px 0 0 0;
             font-size: 20px;
         }
@@ -57,17 +57,17 @@
         }
         img[usemap]{
             height: auto;
-            max-width: 80%;
+            max-width: 90%;
             width:auto;
         }
         #header{
             padding:0;
         }
-        #menu {
+        /*#menu {
             position: relative;
             padding-bottom: 50px;
-            padding-left: 10%;
-            padding-right: 10%;
+            padding-left: 5%;
+            padding-right: 5%;
             overflow: hidden;
         }
         #menu ul{
@@ -96,31 +96,53 @@
             text-decoration: none;
             color: #ffffff;
             width: 130px; 
-            margin: 1px 0px;
+            margin: 0px;
             text-align: center;
             font-size: 1.2em;
         }
         #menu li a:hover{
             border-left: 8px solid #990033;
             background-color: #474655;
-        }
+        }*/
         #main{
             width: 100%;
-        }          
-        #sitemap{
-            position: relative;
-            margin:50px 0 0 0;
-            padding-top: 10px;
-            padding-right: 0px;
-            padding-left: 10%;
-            padding-bottom: 10px;
-            background-color:#333631;
         }
-        #sitemap p{
-            padding: 0;
-            font-size: 1.2em;
-            color:#ffffff;
-        }
+
+.openBtn,.openBtn2,.openBtn3 {
+cursor: pointer;
+margin-left: 5%;
+margin-right: 5%;
+padding: 5px;
+border: none;
+border-left: 10px solid #C97556;
+background-color: #474655;
+color: #ffffff;
+font-family: "Trebuchet MS", sans-serif;
+font-size: 1.2em;
+}
+ 
+.openBtn:hover,.openBtn2:hover,.openBtn3:hover {
+opacity: 0.7;
+}
+
+.textArea,.textArea2,.textArea3 {
+display: none;
+cursor: pointer;
+margin-left: 10%;
+margin-right: 5%;
+padding: 5px;
+border: none;
+border-left: 10px solid #C97556;
+background-color: #474655;
+color: #ffffff;
+font-family: "Trebuchet MS", sans-serif;
+font-size: 1.2em;
+}
+ 
+/* 表示ボタン ー 逆三角アイコン */
+.faColor {
+color: #9FD6D2;
+}
 #dropmenu{
     list-style-type: none;
     width: 100%;
@@ -246,9 +268,9 @@
     font-family: "Yu Gothic UI","Meiryo UI","ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif;
     position: relative;
     padding-top: 3%;
-    padding-right: 5%;
+    padding-right: 0%;
     padding-bottom: 3%;
-    padding-left: 5%;
+    padding-left: 0%;
     background-color: #2F2F2F;
 }
 /* サイトマップのリンクの書式 */
