@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <title>出店MAP/中庭</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+
+    <!--デフォルト-->
     <link rel="stylesheet" type="text/css" href="other_style.css">
+
+    <!--スマートフォン-->
+    <link rel="stylesheet" type="text/css" href="other_style_smart.css">
 </head>
 <body>
 
@@ -165,7 +171,7 @@
    <p id="map" align="center">各マップへ</p>
         <hr size="5" width="90%" color="#191970">
 
-    <div id="menu">
+    <!--<div id="menu">
         <ul>
         <li><a href="home.html">ホームへ</a></li>
         <li><a href="nakaniwa.html">中庭へ</a></li>
@@ -174,6 +180,29 @@
         <li><a href="#">第1体育館前へ</a></li>
         <li><a href="#">グラウンドへ</a></li>
         </ul> 
+    </div>-->
+
+    <div id="menu">
+
+    <p class="openBtn">中庭へ</p>
+    <p class="textArea"><a href="nakaniwa.html">ステージ付近</a></p>
+    <p class="textArea"><a href="nakaniwa.html">グラウンド前</a></p>
+    <p class="textArea"><a href="nakaniwa.html">ICT前</a></p>
+    <p class="textArea"><a href="nakaniwa.html">ピロティ</a></p>
+
+    <p class="openBtn2">共通教育棟へ</p>
+    <p class="textArea2"><a href="nakaniwa.html">1F</a></p>
+    <p class="textArea2"><a href="nakaniwa.html">2F</a></p>
+    <p class="textArea2"><a href="nakaniwa.html">3F</a></p>
+
+    <p class="openBtn3">専門科棟へ</p>
+    <p class="textArea3"><a href="nakaniwa.html">1F</a></p>
+    <p class="textArea3"><a href="nakaniwa.html">2F</a></p>
+
+    <p class="openBtn">第1体育館へ</p>
+    <p class="openBtn">第2体育館へ</p>
+    <p class="openBtn">実習工場へ</p>
+
     </div>
 
     <div id="sitemap">
@@ -207,6 +236,25 @@
     <script>
     $(document).ready(function(e) {
         $('img[usemap]').rwdImageMaps();
+    });
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function(){
+        $(".openBtn").click(function(){
+            $($(this).nextAll(".textArea")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn2").click(function(){
+            $($(this).nextAll(".textArea2")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn3").click(function(){
+            $($(this).nextAll(".textArea3")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
     });
     </script>
 

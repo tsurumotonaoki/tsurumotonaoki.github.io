@@ -1,5 +1,5 @@
-    /* パソコン用CSS */
-@media screen and (min-width: 769px){
+/*スマホ用*/
+@media screen and (max-width: 768px){
     h1{
             margin:50px 0 0 0;
             color: #ffffff;
@@ -62,8 +62,8 @@
         }
         img[usemap]{
             height: auto;
-            max-width: 90%;
             padding-top: 50px;
+            max-width: 90%;
             width:auto;
         }
         #disp_img{
@@ -165,10 +165,6 @@
         #main{
             width: 100%;
         }
-        #menu{
-            margin:0 0 50px 0;
-        }
-        
 .openBtn,.openBtn2,.openBtn3 {
 cursor: pointer;
 margin-left: 5%;
