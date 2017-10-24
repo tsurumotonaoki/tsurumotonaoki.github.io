@@ -197,6 +197,8 @@
     <p class="openBtn">第2体育館へ</p>
     <p class="openBtn">実習工場へ</p>
 
+    </div>
+
     <div id="sitemap">
         <div id="link">
             <a style="display: table;" id="sitemap_h">SITEMAP</a>
@@ -231,6 +233,25 @@
     });
     </script>
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(function(){
+        $(".openBtn").click(function(){
+            $($(this).nextAll(".textArea")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn2").click(function(){
+            $($(this).nextAll(".textArea2")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+        $(".openBtn3").click(function(){
+            $($(this).nextAll(".textArea3")).animate(
+            {height: "toggle", opacity: "toggle"},"nomal");
+        });
+    });
+    </script>
+    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />  
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js'></script>  
