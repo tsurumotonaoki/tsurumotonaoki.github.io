@@ -1,3 +1,4 @@
+@media screen and (min-width: 769px){   
     h1{
             margin:50px 0 0 0;
             color: #ffffff;
@@ -378,4 +379,4 @@ color: #9FD6D2;
     padding-bottom: 0;
     padding-left: 0;
 }
-© 2017 GitHub, Inc.
+}
