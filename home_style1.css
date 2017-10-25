@@ -43,7 +43,7 @@
             position: relative;
             margin: 0;
             width: 100%;
-            background:linear-gradient(#4bc0c8,#c779d0);
+            background:linear-gradient(#CC6699,#4bc0c8);
         }
         table{
             text-align: center; 
@@ -84,8 +84,13 @@
             padding-bottom: 0%;
         }
         #explain p{
+            width: 30%;
             margin-top: 0;
             margin-left: 20%;
+            color: #ffffff;
+            background-color: #474655;
+            text-align: left;
+            font-family: "Trebuchet MS", sans-serif;
             font-size: 1.2em;
         }
 
@@ -109,7 +114,7 @@
         margin-right: 0%;
         padding: 5px;
         border: none;
-        border-left: 10px solid #C97556;
+        border-left: 10px solid #3366CC;
         background-color: #474655;
         color: #ffffff;
         font-family: "Trebuchet MS", sans-serif;
