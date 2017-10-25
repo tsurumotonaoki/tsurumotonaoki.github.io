@@ -1,7 +1,8 @@
 ﻿ /* パソコン用CSS */
 @media screen and (min-width: 769px){
        h1{
-            margin:50px  0 50px 0;
+            margin-top:5%;
+            margin-bottom:5%;
             color: #ffffff;
             font-size: 4em;
             font-weight: bold;
@@ -47,31 +48,31 @@
             width:auto;
         }
         #map1{
-            width:80%;
-            margin-left: 10%;
-            margin-right: 10%;
+            width: 95%;
+            margin-left: 5%;
+            margin-right: 0%;
         }
         #map2{
             float: right;
-            width:200px;
-            height: 200px;
-            margin-left: 10%;
-            margin-right: 10%;
+            width: 30%;
+            margin-left: 0%;
+            margin-right: 15%;
         }
         #explain{
+            overflow: hidden;
             padding-top: 0%;
-            padding-left: 10%;
-            padding-bottom: 5%;
+            padding-left: 0%;
+            padding-bottom: 0%;
         }
         #explain p{
             margin-top: 0;
-            margin-left: 5%;
+            margin-left: 20%;
             font-size: 1.2em;
         }
 
     .openBtn{
         cursor: pointer;
-        margin-top: 5%;
+        margin-top: 3%;
         margin-left: 5%;
         margin-right: 5%;
         padding: 5px;
@@ -84,9 +85,9 @@
         }
     .openBtn_i{
         cursor: pointer;
-        margin-top: 5%;
+        margin-top: 3%;
         margin-left: 5%;
-        margin-right: 5%;
+        margin-right: 0%;
         padding: 5px;
         border: none;
         border-left: 10px solid #C97556;
@@ -100,10 +101,12 @@
     }
     .textArea {
         display: none;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     #menu{
-        margin-bottom: 100px;
+        margin-bottom: 10%;
     }
  .hm_menu_check {/* チェックボックスを隠す */
         display: none;
